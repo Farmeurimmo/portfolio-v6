@@ -1,15 +1,24 @@
-# Nuxt Minimal Starter
+# Portfolio V6 - Nuxt & Vue 3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the sixth iteration of my personal portfolio website, built using Nuxt 3 and Vue 3. My last portfolio was built
+with Next.js, React, Tailwind CSS and DaisyUI.
+
+Since I now professionally work with Vue, I decided to give Nuxt a try and build my portfolio with it.
+
+Scheduled release date: 2026-09-30
+
+## Technologies Used
+
+- [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
+- [Vue 3 documentation](https://vuejs.org/guide/introduction.html)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Pnpm](https://pnpm.io/)
 
 ## Setup
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
 # pnpm
 pnpm install
 
@@ -25,9 +34,6 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
 # pnpm
 pnpm dev
 
@@ -37,39 +43,3 @@ yarn dev
 # bun
 bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
