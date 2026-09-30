@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
+const colorMode = useColorMode()
 const canvas = ref<HTMLCanvasElement | null>(null)
 
 const particlesCount = 100
-const noiseScale = 0.02
 const strokeWeight = 1
 const tail = 3
 
@@ -15,8 +15,8 @@ let angle = (Math.PI / 180) * -90
 let particles: Particle[] = []
 let width = 0
 let height = 0
-let primaryColor = '#3b82f6'
 let backgroundColor = '#ffffff'
+let particleColor = '#2563eb'
 
 class Particle {
   x: number
@@ -81,7 +81,7 @@ class Particle {
       return
     }
 
-    context.strokeStyle = primaryColor
+    context.strokeStyle = particleColor
     context.lineWidth = strokeWeight
 
     for (let i = 0; i < this.pastPositions.length - 1; i++) {
@@ -134,14 +134,14 @@ class Particle {
   }
 }
 
-const readTheme = () => {
+const updateThemeColors = () => {
   const styles = getComputedStyle(document.documentElement)
 
-  primaryColor =
-      styles.getPropertyValue('--color-primary').trim() || '#3b82f6'
-
   backgroundColor =
-      styles.getPropertyValue('--color-base-100').trim() || '#ffffff'
+      styles.getPropertyValue('--particle-background').trim() || '#ffffff'
+
+  particleColor =
+      styles.getPropertyValue('--particle-color').trim() || '#2563eb'
 }
 
 const resize = () => {
@@ -168,7 +168,7 @@ const resize = () => {
   )
 }
 
-const animate = (time: number) => {
+const animate = () => {
   if (!context) {
     return
   }
@@ -181,11 +181,17 @@ const animate = (time: number) => {
     particle.render()
   }
 
-  globalAngle += Math.sin(time * 0.0002) * 0.0005
-  angle += Math.sin(time * 0.00015) * 0.0003
-
   animationFrame = requestAnimationFrame(animate)
 }
+
+watch(
+    () => colorMode.value,
+    () => {
+      if (import.meta.client) {
+        requestAnimationFrame(updateThemeColors)
+      }
+    }
+)
 
 onMounted(() => {
   if (!canvas.value) {
@@ -198,7 +204,7 @@ onMounted(() => {
     return
   }
 
-  readTheme()
+  updateThemeColors()
   resize()
 
   window.addEventListener('resize', resize)
