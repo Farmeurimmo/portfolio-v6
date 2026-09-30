@@ -9,8 +9,9 @@ export default defineNuxtConfig({
     },
 
     modules: [
-        '@nuxtjs/i18n',
-        'nitro-cloudflare-dev'
+      '@nuxtjs/i18n',
+      'nitro-cloudflare-dev',
+      '@nuxtjs/color-mode'
     ],
 
     css: ['~/assets/css/main.css'],
