@@ -7,3 +7,13 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --particle-background: #ffffff;
+    --particle-color: #2563eb;
+}
+
+.dark {
+    --particle-background: #000000;
+    --particle-color: #60a5fa;
+}

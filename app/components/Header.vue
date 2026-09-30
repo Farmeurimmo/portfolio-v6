@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const colorMode = useColorMode()
