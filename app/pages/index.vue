@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p> home page </p>
+  <p> {{ $t('welcome') }}</p>
 </template>
 
 <style scoped>

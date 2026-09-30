@@ -8,6 +8,13 @@ export default defineNuxtConfig({
         enabled: true
     },
 
+    i18n: {
+        locales: [
+            {code: 'en', name: 'English', file: 'en.json'},
+            {code: 'fr', name: 'Français', file: 'fr.json'}
+        ]
+    },
+
     modules: [
       '@nuxtjs/i18n',
       'nitro-cloudflare-dev',
