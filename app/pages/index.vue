@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <NuxtWelcome />
+  <p> home page </p>
 </template>
 
 <style scoped>

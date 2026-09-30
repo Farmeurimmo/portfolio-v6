@@ -3,10 +3,14 @@
 </script>
 
 <template>
-  <Header />
+  <div class="relative min-h-screen">
+    <ParticleBackground />
 
-  <div>
-    <slot />
+    <Header />
+
+    <main class="relative z-10">
+      <slot />
+    </main>
   </div>
 </template>
 
