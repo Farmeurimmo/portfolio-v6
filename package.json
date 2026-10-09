@@ -1,14 +1,14 @@
+
 {
 	"name": "portfolio-v6",
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"build": "nuxt build",
+		"build": "nuxt generate",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
-		"preview": "pnpm run build",
-		"postinstall": "nuxt prepare",
-		"deploy": "pnpm run build"
+		"preview": "npx serve .output/public",
+		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
 		"@nuxtjs/color-mode": "4.0.1",
