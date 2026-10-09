@@ -16,9 +16,8 @@ export default defineNuxtConfig({
     },
 
     modules: [
-      '@nuxtjs/i18n',
-      'nitro-cloudflare-dev',
-      '@nuxtjs/color-mode'
+        '@nuxtjs/i18n',
+        '@nuxtjs/color-mode'
     ],
 
     css: ['~/assets/css/main.css'],
@@ -29,11 +28,11 @@ export default defineNuxtConfig({
     },
 
     nitro: {
-        preset: 'cloudflare-pages',
+        preset: 'static',
 
-        cloudflare: {
-            deployConfig: true,
-            nodeCompat: true
+        prerender: {
+            crawlLinks: true,
+            failOnError: true
         }
     }
 })
