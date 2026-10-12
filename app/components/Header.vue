@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
             height="32"
         >
 
-        <span class="text-2xl font-bold transition-colors hover:text-primary">
+        <span class="text-2xl font-bold transition-colors hover:text-primary dark:text-white">
           Farmeurimmo
         </span>
       </NuxtLink>
@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
             v-for="item in navItems"
             :key="item.label"
             :to="localePath(item.path)"
-            class="text-sm font-medium text-gray-950 transition-colors hover:text-primary"
+            class="text-sm font-medium text-gray-950 dark:text-white transition-colors hover:text-primary"
         >
           {{ $t(item.label) }}
         </NuxtLink>

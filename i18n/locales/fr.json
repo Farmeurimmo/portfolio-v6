@@ -1,3 +1,8 @@
 {
-  "welcome": "Bienvenue"
+  "nav": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "projects": "Projets",
+    "contact": "Contact"
+  }
 }
