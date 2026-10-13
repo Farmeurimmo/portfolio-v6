@@ -64,7 +64,9 @@ useSeoMeta({
         </li>
       </ul>
 
-      <ContentRenderer :value="project"/>
+      <div class="project-detail__content">
+        <ContentRenderer :value="project" />
+      </div>
     </article>
   </main>
 </template>
