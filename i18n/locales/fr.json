@@ -4,5 +4,107 @@
     "blog": "Blog",
     "projects": "Projets",
     "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Développeur Full Stack",
+      "title": "Farmeurimmo",
+      "intro": "Je conçois des applications solides, pensées pour durer et évoluer dans le temps. Mon point de départ n’est jamais la technologie, mais la compréhension des objectifs réels du projet.",
+      "approach": "Chaque projet a ses contraintes et ses priorités. Je choisis mes outils en fonction de ce qui résout efficacement le problème, pas en fonction des tendances.",
+      "navigationLabel": "Navigation principale",
+      "projectsCta": "Découvrir mes projets",
+      "contactCta": "Me contacter",
+      "stackTitle": "Technologies principales",
+      "asideTitle": "Une approche pragmatique",
+      "asideDescription": "Du développement à la mise en production, avec une vision globale du projet."
+    },
+    "projects": {
+      "eyebrow": "Réalisations",
+      "title": "Quelques projets",
+      "description": "Des projets qui illustrent mon approche du développement, de l'architecture et de l'infrastructure.",
+      "items": {
+        "application": {
+          "category": "Développement web",
+          "title": "Applications web",
+          "description": "Conception d'applications complètes, de l'API à l'interface utilisateur."
+        },
+        "plugins": {
+          "category": "Développement Java",
+          "title": "Plugins Minecraft",
+          "description": "Développement de fonctionnalités serveur avec une attention particulière aux performances et à la maintenabilité."
+        },
+        "infrastructure": {
+          "category": "Infrastructure",
+          "title": "Déploiement & DevOps",
+          "description": "Mise en place et maintenance d'environnements de production fiables."
+        }
+      }
+    },
+    "services": {
+      "eyebrow": "Expertise",
+      "title": "Ce que je fais",
+      "java": {
+        "title": "Développement Java",
+        "description": "Conception d'APIs Spring Boot et développement de plugins pour Minecraft (Paper, Velocity, BungeeCord), orientés performance et maintenabilité."
+      },
+      "web": {
+        "title": "Développement Web",
+        "description": "Création d'applications web modernes et performantes, avec une attention particulière portée à l'architecture et à l'expérience utilisateur."
+      },
+      "system": {
+        "title": "Administration Système",
+        "description": "Gestion de serveurs Linux : déploiement, sécurisation, optimisation des performances et maintenance en production."
+      },
+      "architecture": {
+        "title": "Support & Architecture",
+        "description": "Aide au debugging, audit de code, conseil en architecture et accompagnement technique sur des projets existants."
+      }
+    },
+    "about": {
+      "eyebrow": "Présentation",
+      "title": "Un peu plus sur moi",
+      "paragraphs": [
+        "Je m'intéresse à l'informatique depuis plusieurs années, avec une attirance particulière pour tout ce qui permet de comprendre ce qu'il se passe derrière l'écran. Cette curiosité m'a naturellement conduit vers le développement logiciel, mais aussi vers l'administration système. J'apprécie autant concevoir une application que préparer l'infrastructure qui la fait fonctionner.",
+        "Au fil du temps, j'ai développé mes propres projets, expérimenté différentes technologies et appris à gérer des serveurs, des services web et des environnements de production. Cette approche me permet d'avoir une vision globale d'un projet, depuis l'idée initiale jusqu'à son déploiement et sa maintenance.",
+        "Ma curiosité ne s'arrête pas au logiciel. J'aime également explorer l'électronique et les systèmes embarqués à travers des projets personnels. Concevoir une station météo, réaliser une alarme ou automatiser un équipement sont autant d'occasions de relier le monde physique et le monde numérique.",
+        "J'accorde aussi une place importante aux activités qui demandent de la rigueur, de la patience et de la progression sur le long terme. L'escalade et la callisthénie m'ont appris l'importance de la persévérance, tandis que le jardinage offre un équilibre différent, plus calme, qui permet de prendre du recul.",
+        "Chaque expérience contribue à ma manière de travailler. J'aime analyser les problèmes, comprendre leurs causes et construire des solutions durables. Plus qu'une simple activité professionnelle, la technologie est pour moi un domaine d'apprentissage permanent où il y a toujours quelque chose à découvrir et à améliorer."
+      ],
+      "approachTitle": "Ma démarche",
+      "approach": {
+        "understand": "Comprendre le besoin",
+        "design": "Concevoir une solution adaptée",
+        "evolve": "Faire évoluer durablement"
+      }
+    },
+    "technologies": {
+      "eyebrow": "Stack technique",
+      "title": "Technologies que j'utilise",
+      "description": "Un ensemble d'outils choisis en fonction des besoins et des contraintes des projets.",
+      "groups": {
+        "languages": "Langages",
+        "frameworks": "Frameworks & bibliothèques",
+        "devops": "DevOps & infrastructure",
+        "databases": "Bases de données",
+        "monitoring": "Surveillance"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Vous souhaitez me contacter ?",
+      "description": "N'hésitez pas à m'envoyer un message en utilisant le formulaire ou les moyens de contact ci-dessous. Je vous répondrai dans les plus brefs délais.",
+      "otherMethods": "Autres moyens de me contacter",
+      "name": "Robin Massonnat",
+      "form": {
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "subject": "Objet",
+        "message": "Message",
+        "submit": "Envoyer le message"
+      }
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
   }
 }
