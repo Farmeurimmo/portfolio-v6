@@ -18,7 +18,8 @@ export default defineNuxtConfig({
 
     modules: [
         '@nuxtjs/i18n',
-        '@nuxtjs/color-mode'
+        '@nuxtjs/color-mode',
+        '@nuxt/content'
     ],
 
     css: ['~/assets/css/main.css'],
