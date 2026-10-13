@@ -652,6 +652,121 @@ body {
     color: var(--foreground);
 }
 
+.site-footer {
+    width: 100%;
+    border-top: 1px solid var(--border);
+    color: var(--foreground);
+}
+
+.site-footer__main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 3rem 1.5rem;
+}
+
+.site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.site-footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--foreground);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-footer__logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+}
+
+.site-footer__muted {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.site-footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.site-footer__column h2 {
+    margin-bottom: 0.25rem;
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.site-footer__column a,
+.site-footer__source a {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.site-footer__column a:hover,
+.site-footer__source a:hover {
+    color: var(--primary);
+}
+
+.site-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer__source {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-footer__commit {
+    font-family: monospace;
+}
+
+@media (max-width: 800px) {
+    .site-footer__main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .site-footer__main {
+        gap: 2rem;
+        padding-inline: 1rem;
+    }
+
+    .site-footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-inline: 1rem;
+    }
+}
+
 @media (max-width: 800px) {
     .portfolio {
         gap: 5rem;

@@ -115,6 +115,21 @@
     "back": "Retour à la liste des articles"
   },
   "footer": {
+    "services": "Services",
+    "servicesList": {
+      "web": "Développement web",
+      "java": "Développement Java",
+      "infrastructure": "Infrastructure et DevOps",
+      "consulting": "Conseil et accompagnement"
+    },
+    "legalMentions": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "since": "Développeur depuis 2018.",
+    "sourcecode": "Code source du portfolio",
+    "others": "Autres",
+    "linkedin": "Robin Massonnat sur LinkedIn",
+    "github": "Farmeurimmo sur GitHub",
+    "status": "Statut des services",
     "rights": "Tous droits réservés."
   }
 }

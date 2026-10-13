@@ -25,7 +25,7 @@ const services = [
     descriptionKey: 'home.services.web.description'
   },
   {
-    id: 'system',
+    id: 'infrastructure',
     titleKey: 'home.services.system.title',
     descriptionKey: 'home.services.system.description'
   },
@@ -254,6 +254,7 @@ const featuredProjects = computed(() =>
         <article
             v-for="service in services"
             :key="service.id"
+            :id="service.id"
             class="service-card"
         >
           <h3 class="service-card__title">
