@@ -218,7 +218,7 @@
 }
 
 .project-card__preview {
-    min-height: 250px;
+    min-height: 400px;
     display: flex;
     align-items: flex-end;
     padding: 1.5rem;
@@ -231,7 +231,7 @@
 }
 
 .project-card:first-child .project-card__preview {
-    min-height: 350px;
+    min-height: 600px;
 }
 
 .project-card__category {
