@@ -2,6 +2,7 @@
 import {useI18n} from 'vue-i18n'
 
 const {t} = useI18n()
+const localePath = useLocalePath()
 
 const mainTechnologies = [
   'Java',
@@ -10,27 +11,6 @@ const mainTechnologies = [
   'TypeScript',
   'PostgreSQL',
   'Linux'
-]
-
-const projects = [
-  {
-    id: 'application',
-    titleKey: 'home.projects.items.application.title',
-    descriptionKey: 'home.projects.items.application.description',
-    technologies: ['Spring Boot', 'Vue 3', 'PostgreSQL']
-  },
-  {
-    id: 'plugins',
-    titleKey: 'home.projects.items.plugins.title',
-    descriptionKey: 'home.projects.items.plugins.description',
-    technologies: ['Java', 'Paper', 'Velocity']
-  },
-  {
-    id: 'infrastructure',
-    titleKey: 'home.projects.items.infrastructure.title',
-    descriptionKey: 'home.projects.items.infrastructure.description',
-    technologies: ['Linux', 'Docker', 'Cloudflare']
-  }
 ]
 
 const services = [
@@ -135,6 +115,20 @@ const technologyGroups = [
     ]
   }
 ]
+
+const {locale} = useI18n()
+
+const {data: projects} = await useAsyncData(
+    'home-projects',
+    () => queryCollection('projects')
+        .where('stem', 'LIKE', `projects/${locale.value}/%`)
+        .all(),
+    {watch: [locale]}
+)
+
+const featuredProjects = computed(() =>
+    (projects.value ?? []).slice(0, 3)
+)
 </script>
 
 <template>
@@ -208,36 +202,40 @@ const technologyGroups = [
       </header>
 
       <div class="projects__grid">
-        <article
-            v-for="project in projects"
-            :key="project.id"
+        <NuxtLink
+            v-for="project in featuredProjects"
+            :key="project.stem"
+            :to="localePath(`/projects/${project.stem.split('/').pop()}`)"
             class="project-card"
         >
           <div class="project-card__preview">
-            <span class="project-card__category">
-              {{ t(`home.projects.items.${project.id}.category`) }}
-            </span>
+            <img
+                v-if="project.meta.image"
+                :src="project.meta.image"
+                :alt="project.title"
+                class="project-card__image"
+            >
           </div>
 
           <div class="project-card__content">
             <h3 class="project-card__title">
-              {{ t(project.titleKey) }}
+              {{ project.title }}
             </h3>
 
             <p class="project-card__description">
-              {{ t(project.descriptionKey) }}
+              {{ project.description }}
             </p>
 
             <ul class="project-card__technologies">
               <li
-                  v-for="technology in project.technologies"
+                  v-for="technology in project.meta.tags"
                   :key="technology"
               >
                 {{ technology }}
               </li>
             </ul>
           </div>
-        </article>
+        </NuxtLink>
       </div>
     </section>
 
