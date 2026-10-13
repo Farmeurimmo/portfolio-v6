@@ -108,6 +108,10 @@
     "title": "Mes projets",
     "description": "Découvrez une sélection de projets réalisés, les technologies utilisées et les solutions développées."
   },
+  "blog": {
+    "title": "Blog",
+    "description": "Articles techniques, retours d’expérience et projets autour du développement web, de Java et des technologies que j’utilise."
+  },
   "footer": {
     "rights": "Tous droits réservés."
   }
