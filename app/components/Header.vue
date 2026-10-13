@@ -53,13 +53,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav class="relative z-20 w-full border-b border-gray-300">
+  <nav class="relative z-20 w-full border-b border-gray-300 dark:border-gray-700">
     <div
         class="mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-4 py-4 md:flex-row md:justify-between"
     >
       <NuxtLink
           :to="localePath('/')"
-          class="flex items-center gap-3 text-gray-950"
+          class="flex items-center gap-3 text-gray-950 dark:text-white"
       >
         <img
             src="https://cdn.farmeurimmo.fr/img/logo.jpg"
@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
             height="32"
         >
 
-        <span class="text-2xl font-bold transition-colors hover:text-primary dark:text-white">
+        <span class="text-2xl font-bold transition-colors hover:text-primary">
           Farmeurimmo
         </span>
       </NuxtLink>
@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
             v-for="item in navItems"
             :key="item.label"
             :to="localePath(item.path)"
-            class="text-sm font-medium text-gray-950 transition-colors hover:text-primary"
+            class="text-sm font-medium text-gray-950 transition-colors hover:text-primary dark:text-gray-200"
         >
           {{ $t(item.label) }}
         </NuxtLink>
@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
         <div class="relative">
           <button
               type="button"
-              class="flex h-10 items-center gap-2 rounded-lg bg-gray-100 px-3 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-200 hover:text-primary dark:hover:bg-gray-700"
+              class="flex h-10 items-center gap-2 rounded-lg bg-gray-100 px-3 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-200 hover:text-primary dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
               aria-label="Change language"
               :aria-expanded="localeOpen"
               @click.stop="toggleLocale"
@@ -109,13 +109,13 @@ onBeforeUnmount(() => {
 
           <div
               v-if="localeOpen"
-              class="absolute right-0 top-full z-50 mt-2 w-36 rounded-lg border border-gray-300 p-1.5 shadow-lg dark:bg-gray-900"
+              class="absolute right-0 top-full z-50 mt-2 w-36 rounded-lg border border-gray-300 bg-white p-1.5 shadow-lg dark:border-gray-700 dark:bg-gray-900"
           >
             <button
                 v-for="availableLocale in locales"
                 :key="availableLocale.code"
                 type="button"
-                class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-gray-950 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-gray-950 transition-colors hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
                 :class="{
                 'font-semibold text-primary': availableLocale.code === locale
               }"
@@ -131,7 +131,7 @@ onBeforeUnmount(() => {
 
         <button
             type="button"
-            class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-950 transition-colors hover:bg-gray-200 hover:text-primary dark:hover:bg-gray-700"
+            class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-950 transition-colors hover:bg-gray-200 hover:text-primary dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
             aria-label="Toggle theme between light and dark mode"
             @click="toggleTheme"
         >
@@ -143,7 +143,8 @@ onBeforeUnmount(() => {
               fill="currentColor"
           >
             <path
-                d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9-4a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM5 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm12.36-5.64a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0ZM6.64 17.36a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.42 0ZM17.36 18.36a1 1 0 0 1 0-1.41l-.71-.71a1 1 0 1 1 1.41 1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0ZM6.64 6.64a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1-.71-.29Z"/>
+                d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9-4a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM5 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm12.36-5.64a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41 0ZM6.64 17.36a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1-1.42 0ZM17.36 18.36a1 1 0 0 1 0-1.41l-.71-.71a1 1 0 1 1 1.41 1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1-1.41 0ZM6.64 6.64a1 1 0 0 1 0-1.41 1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.71a1 1 0 0 1-.71-.29Z"
+            />
           </svg>
 
           <svg

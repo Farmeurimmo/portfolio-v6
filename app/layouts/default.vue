@@ -8,7 +8,7 @@
 
     <Header />
 
-    <main class="relative z-10">
+    <main class="relative z-10 min-h-screen flex flex-col items-center justify-center">
       <slot />
     </main>
 

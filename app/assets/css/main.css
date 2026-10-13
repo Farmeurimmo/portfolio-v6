@@ -615,6 +615,43 @@ body {
     font-size: 0.9em;
 }
 
+.hero__description,
+.hero__approach {
+    color: var(--portfolio-muted);
+}
+
+.hero__link--secondary {
+    color: var(--foreground);
+}
+
+.hero__stack-item,
+.project-card__technologies li,
+.technology-group__item {
+    color: var(--foreground);
+}
+
+.project-card__title,
+.service-card__title,
+.hero__title,
+.hero__stack-title,
+.section-header__title,
+.about__approach-title,
+.technology-group__title,
+.contact__subtitle {
+    color: var(--foreground);
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+    color: var(--portfolio-muted);
+    opacity: 1;
+}
+
+.project-detail__content h2,
+.project-detail__content h3 {
+    color: var(--foreground);
+}
+
 @media (max-width: 800px) {
     .portfolio {
         gap: 5rem;
