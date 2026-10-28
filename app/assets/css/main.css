@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-    --color-accent: #3b82f6;
-    --color-primary: #3b82f6;
-    --color-primary-hover: #2563eb;
+    --color-accent: #2563eb;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -11,8 +11,9 @@
 :root {
     color-scheme: light;
 
-    --primary: #3b82f6;
-    --foreground: #18181b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-foreground: #ffffff;
     --muted-foreground: #52525b;
     --border: #e4e4e7;
     --background: #ffffff;
@@ -26,6 +27,8 @@
     color-scheme: dark;
 
     --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --primary-foreground: #09090b;
     --foreground: #f4f4f5;
     --muted-foreground: #a1a1aa;
     --border: #3f3f46;
@@ -129,13 +132,14 @@ body {
 }
 
 .hero__link--primary {
-    color: white;
+    color: var(--primary-foreground);
     background: var(--portfolio-primary);
     border-color: var(--portfolio-primary);
 }
 
 .hero__link--primary:hover {
-    filter: brightness(1.08);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
 }
 
 .hero__link--secondary {
@@ -503,16 +507,17 @@ body {
     border: 1px solid var(--portfolio-primary);
     border-radius: 0.6rem;
     background: var(--portfolio-primary);
-    color: white;
+    color: var(--primary-foreground);
     font: inherit;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: filter 180ms ease, transform 180ms ease;
+    transition: background-color 180ms ease, transform 180ms ease;
 }
 
 .contact-form__submit:hover {
-    filter: brightness(1.08);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
     transform: translateY(-2px);
 }
 
