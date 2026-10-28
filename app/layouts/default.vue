@@ -16,7 +16,7 @@ useHead({
 const route = useRoute()
 
 useSeoMeta({
-  ogUrl: () => `${route.fullPath}`,
+  ogUrl: () => `https://farmeurimmo.fr${route.path}`,
   ogSiteName: 'Farmeurimmo',
   ogType: 'website',
   ogImage: 'https://farmeurimmo.fr/og-image.png',

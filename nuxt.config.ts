@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     },
 
     i18n: {
+        baseUrl: 'https://farmeurimmo.fr',
         defaultLocale: 'en',
         strategy: 'prefix_except_default', locales: [
             {code: 'en', name: 'English', file: 'en.json'},
