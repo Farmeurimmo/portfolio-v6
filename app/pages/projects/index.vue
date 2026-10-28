@@ -15,7 +15,6 @@ useSeoMeta({
   description: () => t('projects.description'),
   ogTitle: () => t('projects.title'),
   ogDescription: () => t('projects.description'),
-  ogUrl: () => localePath('/projects'),
 })
 </script>
 

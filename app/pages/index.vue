@@ -137,7 +137,6 @@ useSeoMeta({
   description: t('home.seo.description'),
   ogTitle: t('home.seo.title'),
   ogDescription: t('home.seo.description'),
-  ogUrl: localePath('/')
 })
 </script>
 

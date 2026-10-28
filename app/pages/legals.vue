@@ -8,7 +8,6 @@ useSeoMeta({
   description: () => t('legals.seo.description'),
   ogTitle: () => `${t('legals.seo.title')}`,
   ogDescription: () => t('legals.seo.description'),
-  ogUrl: () => localePath('/legals'),
 })
 </script>
 

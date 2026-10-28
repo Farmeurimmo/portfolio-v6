@@ -12,7 +12,6 @@ useSeoMeta({
   description: () => t('blog.seo.description'),
   ogTitle: () => `${t('blog.seo.title')}`,
   ogDescription: () => t('blog.seo.description'),
-  ogUrl: () => localePath('/blog'),
 })
 </script>
 

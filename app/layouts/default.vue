@@ -13,7 +13,10 @@ useHead({
   meta: [...(head.value.meta || [])],
 })
 
+const route = useRoute()
+
 useSeoMeta({
+  ogUrl: () => `${route.fullPath}`,
   ogSiteName: 'Farmeurimmo',
   ogType: 'website',
   ogImage: 'https://farmeurimmo.fr/og-image.png',
