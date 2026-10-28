@@ -19,8 +19,16 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/i18n',
         '@nuxtjs/color-mode',
-        '@nuxt/content'
+        '@nuxt/content',
+        '@nuxtjs/sitemap',
+        '@nuxtjs/seo'
     ],
+
+    site: {
+        url: 'https://farmeurimmo.fr',
+        name: 'Développeur et Administrateur Système | Farmeurimmo',
+        indexable: false,
+    },
 
     css: ['~/assets/css/main.css'],
     vite: {
