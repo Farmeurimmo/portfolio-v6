@@ -1,13 +1,23 @@
 <script setup lang="ts">
+const head = useLocaleHead({ seo: true })
+
 useHead({
-  titleTemplate: '%s | Farmeurimmo',
-  meta: [
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-    {name: 'author', content: 'Farmeurimmo'},
-  ],
+  htmlAttrs: { lang: () => head.value.htmlAttrs?.lang },
+  titleTemplate: (title) =>
+      title && title !== 'Farmeurimmo' ? `${title} | Farmeurimmo` : 'Farmeurimmo',
   link: [
-    {rel: 'icon', type: 'image/png', href: 'https://cdn.farmeurimmo.fr/img/logo.png'},
-  ]
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    ...(head.value.link || []),
+  ],
+  meta: [...(head.value.meta || [])],
+})
+
+useSeoMeta({
+  ogSiteName: 'Farmeurimmo',
+  ogType: 'website',
+  ogImage: 'https://farmeurimmo.fr/og-image.png',
+  twitterCard: 'summary_large_image',
 })
 </script>
 

@@ -129,13 +129,15 @@ const {data: projects} = await useAsyncData(
 const featuredProjects = computed(() =>
     (projects.value ?? []).slice(0, 3)
 )
-
+useHead({
+  titleTemplate: null
+})
 useSeoMeta({
   title: t('home.seo.title'),
   description: t('home.seo.description'),
-  ogTitle: t('home.seo.ogTitle'),
-  ogDescription: t('home.seo.ogDescription'),
-  ogUrl: 'https://farmeurimmo.fr',
+  ogTitle: t('home.seo.title'),
+  ogDescription: t('home.seo.description'),
+  ogUrl: localePath('/')
 })
 </script>
 

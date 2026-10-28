@@ -1,5 +1,15 @@
 <script setup lang="ts">
 const {t} = useI18n()
+
+const localePath = useLocalePath()
+
+useSeoMeta({
+  title: () => t('legals.seo.title'),
+  description: () => t('legals.seo.description'),
+  ogTitle: () => `${t('legals.seo.title')}`,
+  ogDescription: () => t('legals.seo.description'),
+  ogUrl: () => localePath('/legals'),
+})
 </script>
 
 <template>

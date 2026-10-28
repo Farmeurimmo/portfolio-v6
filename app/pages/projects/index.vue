@@ -12,7 +12,10 @@ const {data: projects} = await useAsyncData(
 
 useSeoMeta({
   title: () => t('projects.title'),
-  description: () => t('projects.description')
+  description: () => t('projects.description'),
+  ogTitle: () => t('projects.title'),
+  ogDescription: () => t('projects.description'),
+  ogUrl: () => localePath('/projects'),
 })
 </script>
 

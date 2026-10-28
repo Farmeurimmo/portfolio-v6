@@ -23,7 +23,10 @@ useSeoMeta({
   description: () => project.value?.description,
   ogTitle: () => project.value?.title,
   ogDescription: () => project.value?.description,
-  ogImage: () => project.value?.meta.image
+  ogImage: () => project.value?.meta.image,
+  ogType: () => 'article',
+  articlePublishedTime: () => project.value?.meta.date,
+  articleAuthor: ['Farmeurimmo'],
 })
 </script>
 

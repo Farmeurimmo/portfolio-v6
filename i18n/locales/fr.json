@@ -6,6 +6,10 @@
     "contact": "Contact"
   },
   "home": {
+    "seo": {
+      "title": "Farmeurimmo - Développeur Full-Stack Java & Vue",
+      "description": "Développeur full-stack Java & Vue, je conçois des applications web performantes et administre les serveurs et infrastructures qui les hébergent."
+    },
     "hero": {
       "eyebrow": "Développeur Full Stack",
       "title": "Farmeurimmo",
@@ -105,16 +109,24 @@
     }
   },
   "projects": {
-    "title": "Mes projets",
-    "description": "Découvrez une sélection de projets réalisés, les technologies utilisées et les solutions développées.",
+    "title": "Projets Java, Vue & Infrastructure",
+    "description": "Projets personnels et scolaires en Java, Vue et administration système : applications web, backends et infrastructure, avec les technologies utilisées.",
     "back": "Retour à la liste des projets"
   },
   "blog": {
     "title": "Blog",
     "description": "Articles techniques, retours d’expérience et projets autour du développement web, de Java et des technologies que j’utilise.",
+    "seo": {
+      "title": "Blog - Développement Java, Vue & Infrastructure",
+      "description": "Articles techniques et retours d’expérience autour du développement web, de Java, de l’administration système et de l’infrastructure."
+    },
     "back": "Retour à la liste des articles"
   },
   "legals": {
+    "seo": {
+      "title": "Mentions légales et politique de confidentialité",
+      "description": "Mentions légales du site farmeurimmo.fr : éditeur, hébergement, données personnelles collectées, analyse d’audience et exercice de vos droits."
+    },
     "title": "Mentions légales",
     "editor_title": "Éditeur du site",
     "editor_name": "Robin MASSONNAT",

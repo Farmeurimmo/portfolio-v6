@@ -8,8 +8,11 @@ const {data: articles} = await useAsyncData(
 )
 
 useSeoMeta({
-  title: () => t('blog.title'),
-  description: () => t('blog.description')
+  title: () => t('blog.seo.title'),
+  description: () => t('blog.seo.description'),
+  ogTitle: () => `${t('blog.seo.title')}`,
+  ogDescription: () => t('blog.seo.description'),
+  ogUrl: () => localePath('/blog'),
 })
 </script>
 
