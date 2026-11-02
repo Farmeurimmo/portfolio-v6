@@ -100,6 +100,7 @@
       "otherMethods": "Autres moyens de me contacter",
       "name": "Robin Massonnat",
       "form": {
+        "disabled": "Le formulaire de contact est temporairement désactivé.",
         "username": "Nom d'utilisateur",
         "email": "Email",
         "subject": "Objet",

@@ -195,6 +195,120 @@ useSeoMeta({
       </aside>
     </section>
 
+    <section id="services" class="services" aria-labelledby="services-title">
+      <header class="section-header">
+        <p class="section-header__eyebrow">
+          {{ t('home.services.eyebrow') }}
+        </p>
+
+        <h2 id="services-title" class="section-header__title">
+          {{ t('home.services.title') }}
+        </h2>
+      </header>
+
+      <div class="services__grid">
+        <article
+            v-for="service in services"
+            :key="service.id"
+            :id="service.id"
+            class="service-card"
+        >
+          <h3 class="service-card__title">
+            {{ t(service.titleKey) }}
+          </h3>
+
+          <p class="service-card__description">
+            {{ t(service.descriptionKey) }}
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section
+        id="technologies"
+        class="technologies"
+        aria-labelledby="technologies-title"
+    >
+      <header class="section-header">
+        <p class="section-header__eyebrow">
+          {{ t('home.technologies.eyebrow') }}
+        </p>
+
+        <h2 id="technologies-title" class="section-header__title">
+          {{ t('home.technologies.title') }}
+        </h2>
+
+        <p class="section-header__description">
+          {{ t('home.technologies.description') }}
+        </p>
+      </header>
+
+      <div class="technologies__grid">
+        <section
+            v-for="group in technologyGroups"
+            :key="group.id"
+            class="technology-group"
+        >
+          <h3 class="technology-group__title">
+            {{ t(group.labelKey) }}
+          </h3>
+
+          <ul class="technology-group__list">
+            <li
+                v-for="technology in group.items"
+                :key="technology"
+                class="technology-group__item"
+            >
+              {{ technology }}
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section id="apropos" class="about" aria-labelledby="about-title">
+      <div class="about__content">
+        <header class="section-header">
+          <p class="section-header__eyebrow">
+            {{ t('home.about.eyebrow') }}
+          </p>
+
+          <h2 id="about-title" class="section-header__title">
+            {{ t('home.about.title') }}
+          </h2>
+        </header>
+
+        <div class="about__text">
+          <p
+              v-for="paragraphKey in aboutParagraphKeys"
+              :key="paragraphKey"
+          >
+            {{ t(paragraphKey) }}
+          </p>
+        </div>
+      </div>
+
+      <aside class="about__approach">
+        <h3 class="about__approach-title">
+          {{ t('home.about.approachTitle') }}
+        </h3>
+
+        <ol class="about__approach-list">
+          <li
+              v-for="(approachKey, index) in approachKeys"
+              :key="approachKey"
+              class="about__approach-item"
+          >
+            <span class="about__approach-number">
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
+
+            <span>{{ t(approachKey) }}</span>
+          </li>
+        </ol>
+      </aside>
+    </section>
+
     <section id="projets" class="projects" aria-labelledby="projects-title">
       <header class="section-header">
         <p class="section-header__eyebrow">
@@ -248,120 +362,6 @@ useSeoMeta({
       </div>
     </section>
 
-    <section id="services" class="services" aria-labelledby="services-title">
-      <header class="section-header">
-        <p class="section-header__eyebrow">
-          {{ t('home.services.eyebrow') }}
-        </p>
-
-        <h2 id="services-title" class="section-header__title">
-          {{ t('home.services.title') }}
-        </h2>
-      </header>
-
-      <div class="services__grid">
-        <article
-            v-for="service in services"
-            :key="service.id"
-            :id="service.id"
-            class="service-card"
-        >
-          <h3 class="service-card__title">
-            {{ t(service.titleKey) }}
-          </h3>
-
-          <p class="service-card__description">
-            {{ t(service.descriptionKey) }}
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="apropos" class="about" aria-labelledby="about-title">
-      <div class="about__content">
-        <header class="section-header">
-          <p class="section-header__eyebrow">
-            {{ t('home.about.eyebrow') }}
-          </p>
-
-          <h2 id="about-title" class="section-header__title">
-            {{ t('home.about.title') }}
-          </h2>
-        </header>
-
-        <div class="about__text">
-          <p
-              v-for="paragraphKey in aboutParagraphKeys"
-              :key="paragraphKey"
-          >
-            {{ t(paragraphKey) }}
-          </p>
-        </div>
-      </div>
-
-      <aside class="about__approach">
-        <h3 class="about__approach-title">
-          {{ t('home.about.approachTitle') }}
-        </h3>
-
-        <ol class="about__approach-list">
-          <li
-              v-for="(approachKey, index) in approachKeys"
-              :key="approachKey"
-              class="about__approach-item"
-          >
-            <span class="about__approach-number">
-              {{ String(index + 1).padStart(2, '0') }}
-            </span>
-
-            <span>{{ t(approachKey) }}</span>
-          </li>
-        </ol>
-      </aside>
-    </section>
-
-    <section
-        id="technologies"
-        class="technologies"
-        aria-labelledby="technologies-title"
-    >
-      <header class="section-header">
-        <p class="section-header__eyebrow">
-          {{ t('home.technologies.eyebrow') }}
-        </p>
-
-        <h2 id="technologies-title" class="section-header__title">
-          {{ t('home.technologies.title') }}
-        </h2>
-
-        <p class="section-header__description">
-          {{ t('home.technologies.description') }}
-        </p>
-      </header>
-
-      <div class="technologies__grid">
-        <section
-            v-for="group in technologyGroups"
-            :key="group.id"
-            class="technology-group"
-        >
-          <h3 class="technology-group__title">
-            {{ t(group.labelKey) }}
-          </h3>
-
-          <ul class="technology-group__list">
-            <li
-                v-for="technology in group.items"
-                :key="technology"
-                class="technology-group__item"
-            >
-              {{ technology }}
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <header class="section-header">
         <p class="section-header__eyebrow">
@@ -397,6 +397,7 @@ useSeoMeta({
         <form
             class="contact-form"
             @submit.prevent
+            v-if="false"
         >
           <div class="contact-form__field">
             <label for="contact-username">
@@ -459,6 +460,14 @@ useSeoMeta({
             {{ t('home.contact.form.submit') }}
           </button>
         </form>
+        <div
+            v-else
+            class="contact-form__disabled text-red-600 font-bold"
+        >
+          <p>
+            {{ t('home.contact.form.disabled') }}
+          </p>
+        </div>
       </div>
     </section>
   </main>
