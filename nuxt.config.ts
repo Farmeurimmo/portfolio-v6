@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     site: {
         url: 'https://farmeurimmo.fr',
         name: 'Farmeurimmo',
-        indexable: false,
+        indexable: true,
     },
 
     css: ['~/assets/css/main.css'],
