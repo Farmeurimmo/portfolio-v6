@@ -28,6 +28,34 @@ useSeoMeta({
   articlePublishedTime: () => project.value?.meta.date,
   articleAuthor: ['Farmeurimmo'],
 })
+
+const headingShift: Record<string, string> = {
+  h1: 'h2',
+  h2: 'h3',
+  h3: 'h4',
+  h4: 'h5',
+  h5: 'h6',
+}
+
+const shiftHeadings = (node: any): any => {
+  if (!Array.isArray(node)) return node
+  if (typeof node[0] === 'string') {
+    const [tag, props, ...children] = node
+    return [headingShift[tag] ?? tag, props, ...children.map(shiftHeadings)]
+  }
+  return node.map(shiftHeadings)
+}
+
+const renderedProject = computed(() => {
+  if (!project.value?.body) return project.value
+  return {
+    ...project.value,
+    body: {
+      ...project.value.body,
+      value: shiftHeadings(project.value.body.value),
+    },
+  }
+})
 </script>
 
 <template>
@@ -68,7 +96,7 @@ useSeoMeta({
       </ul>
 
       <div class="project-detail__content">
-        <ContentRenderer :value="project" />
+        <ContentRenderer :value="renderedProject"/>
       </div>
     </article>
   </main>
