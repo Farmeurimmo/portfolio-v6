@@ -1,3 +1,189 @@
 {
-  "welcome": "Welcome"
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "seo": {
+      "title": "Farmeurimmo - Full-Stack Java & Vue Developer",
+      "description": "Full-stack Java & Vue developer, I build high-performance web applications and manage the servers and infrastructure that host them."
+    },
+    "hero": {
+      "eyebrow": "Full-Stack Developer",
+      "title": "Farmeurimmo",
+      "intro": "I build robust applications designed to last and evolve over time. My starting point is never the technology, but an understanding of the project’s real goals.",
+      "approach": "Every project has its own constraints and priorities. I choose my tools based on what solves the problem effectively, not based on trends.",
+      "navigationLabel": "Main navigation",
+      "projectsCta": "Discover my projects",
+      "contactCta": "Contact me",
+      "stackTitle": "Main technologies",
+      "asideTitle": "A pragmatic approach",
+      "asideDescription": "From development to production, with a global vision of the project."
+    },
+    "projects": {
+      "eyebrow": "Work",
+      "title": "A few projects",
+      "description": "Projects that illustrate my approach to development, architecture and infrastructure.",
+      "items": {
+        "application": {
+          "category": "Web development",
+          "title": "Web applications",
+          "description": "Design of complete applications, from the API to the user interface."
+        },
+        "plugins": {
+          "category": "Java development",
+          "title": "Minecraft plugins",
+          "description": "Development of server features with particular attention to performance and maintainability."
+        },
+        "infrastructure": {
+          "category": "Infrastructure",
+          "title": "Deployment & DevOps",
+          "description": "Setting up and maintaining reliable production environments."
+        }
+      }
+    },
+    "services": {
+      "eyebrow": "Expertise",
+      "title": "What I do",
+      "java": {
+        "title": "Java Development",
+        "description": "Design of Spring Boot APIs and development of Minecraft plugins (Paper, Velocity, BungeeCord), focused on performance and maintainability."
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "Creation of modern, high-performance web applications, with particular attention to architecture and user experience."
+      },
+      "system": {
+        "title": "System Administration",
+        "description": "Linux server management: deployment, hardening, performance optimization and production maintenance."
+      },
+      "architecture": {
+        "title": "Support & Architecture",
+        "description": "Debugging assistance, code audits, architecture consulting and technical support on existing projects."
+      }
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "A little more about me",
+      "paragraphs": [
+        "I have been interested in computing for several years, with a particular fascination for everything that lets me understand what happens behind the screen. This curiosity naturally led me to software development, but also to system administration. I enjoy designing an application as much as preparing the infrastructure that runs it.",
+        "Over time, I have built my own projects, experimented with different technologies and learned to manage servers, web services and production environments. This approach gives me a global vision of a project, from the initial idea to its deployment and maintenance.",
+        "My curiosity doesn’t stop at software. I also like exploring electronics and embedded systems through personal projects. Designing a weather station, building an alarm or automating a piece of equipment are all opportunities to connect the physical world and the digital world.",
+        "I also place great importance on activities that require rigor, patience and long-term progress. Climbing and calisthenics taught me the importance of perseverance, while gardening offers a different, calmer balance that helps me step back.",
+        "Every experience shapes the way I work. I like to analyze problems, understand their causes and build lasting solutions. More than just a profession, technology is for me a field of constant learning where there is always something to discover and improve."
+      ],
+      "approachTitle": "My approach",
+      "approach": {
+        "understand": "Understand the need",
+        "design": "Design a suitable solution",
+        "evolve": "Evolve it sustainably"
+      }
+    },
+    "technologies": {
+      "eyebrow": "Tech stack",
+      "title": "Technologies I use",
+      "description": "A set of tools chosen according to the needs and constraints of each project.",
+      "groups": {
+        "languages": "Languages",
+        "frameworks": "Frameworks & libraries",
+        "devops": "DevOps & infrastructure",
+        "databases": "Databases",
+        "monitoring": "Monitoring"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Want to get in touch?",
+      "description": "Feel free to send me a message using the form or the contact methods below. I will get back to you as soon as possible.",
+      "otherMethods": "Other ways to contact me",
+      "name": "Robin Massonnat",
+      "form": {
+        "disabled": "The contact form is temporarily disabled.",
+        "username": "Username",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send message"
+      }
+    }
+  },
+  "projects": {
+    "title": "Java, Vue & Infrastructure Projects",
+    "description": "Personal and school projects in Java, Vue and system administration: web applications, backends and infrastructure, along with the technologies used.",
+    "back": "Back to the projects list"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Technical articles, lessons learned and projects around web development, Java and the technologies I use.",
+    "seo": {
+      "title": "Blog - Java, Vue & Infrastructure Development",
+      "description": "Technical articles and lessons learned around web development, Java, system administration and infrastructure."
+    },
+    "back": "Back to the articles list"
+  },
+  "legals": {
+    "seo": {
+      "title": "Legal Notice and Privacy Policy",
+      "description": "Legal notice for farmeurimmo.fr: publisher, hosting, personal data collected, audience analytics and exercising your rights."
+    },
+    "title": "Legal Notice",
+    "editor_title": "Site publisher",
+    "editor_name": "Robin MASSONNAT",
+    "editor_email": "pro{'@'}robin-massonnat.fr",
+    "editor_address": "Address not disclosed",
+    "editor_status": "Sole proprietor (entrepreneur individuel)",
+    "editor_siret": "SIRET 939 633 525 00018",
+    "editor_ape": "APE code 6201Z",
+    "editor_tva": "VAT not applicable, art. 293 B of the French General Tax Code (CGI)",
+    "host_title": "Hosting",
+    "host_name": "Cloudflare, Inc.",
+    "host_address": "101 Townsend St",
+    "host_city": "San Francisco, CA 94107",
+    "host_country": "United States",
+    "host_website": "https://www.cloudflare.com/",
+    "host_email": "privacyquestions{'@'}cloudflare.com",
+    "privacy": {
+      "title": "Privacy Policy",
+      "section_1_title": "Data collection",
+      "section_1_text": "The site processes the personal data you submit through the contact form. This information is used to respond to your requests and is kept only for as long as necessary to process them.",
+      "section_1_item_1": "Username",
+      "section_1_item_2": "Email address",
+      "section_1_item_3": "Subject",
+      "section_1_item_4": "Message",
+      "section_2_title": "Use of data",
+      "section_2_text": "The data collected is used to respond to your requests and follow up on exchanges. It is not sold. It may be processed by technical service providers where necessary for the operation of the site.",
+      "section_2_item_1": "Reply by email",
+      "section_2_item_2": "Handling of requests made via the form",
+      "section_3_title": "Cookies and tracking",
+      "section_3_text": "The site uses Rybbit, a self-hosted audience analytics tool, to measure its traffic and performance. You can view the service at the following address: https://rybbit.farmeurimmo.fr",
+      "section_4_title": "How to contact me",
+      "section_4_text": "For any question regarding this privacy policy or to exercise your rights regarding your personal data, you can contact me by email or via the contact form.",
+      "email_label": "Email: pro{'@'}robin-massonnat.fr",
+      "contact_form_label": "Contact form available on the site.",
+      "third_party_services_title": "Third-party services",
+      "third_party_services_text": "Technical service providers may process certain data necessary for the hosting, security and audience analytics of the site. The actual processing depends on the configuration of the services used.",
+      "third_party_v1": "Cloudflare: Hosting, content delivery and security",
+      "third_party_v2": "Rybbit: Self-hosted audience analytics"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "servicesList": {
+      "web": "Web development",
+      "java": "Java development",
+      "infrastructure": "Infrastructure and DevOps",
+      "consulting": "Consulting and support"
+    },
+    "legalMentions": "Legal notice",
+    "privacy": "Privacy policy",
+    "since": "Developer since 2018.",
+    "sourcecode": "Portfolio source code",
+    "others": "Other",
+    "linkedin": "Robin Massonnat on LinkedIn",
+    "github": "Farmeurimmo on GitHub",
+    "status": "Service status",
+    "rights": "All rights reserved."
+  }
 }
