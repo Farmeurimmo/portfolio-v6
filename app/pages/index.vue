@@ -144,12 +144,9 @@ useSeoMeta({
   <main class="portfolio">
     <section id="accueil" class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
-        <p class="hero__eyebrow">
-          {{ t('home.hero.eyebrow') }}
-        </p>
-
         <h1 id="hero-title" class="hero__title">
-          {{ t('home.hero.title') }}
+          <span class="hero__eyebrow">{{ t('home.hero.eyebrow') }}</span>
+          <span class="hero__name">{{ t('home.hero.title') }}</span>
         </h1>
 
         <p class="hero__description">

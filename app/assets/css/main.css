@@ -521,6 +521,11 @@ body {
     transform: translateY(-2px);
 }
 
+.hero__eyebrow,
+.hero__name {
+    display: block;
+}
+
 .hero__link:focus-visible,
 .contact-form__submit:focus-visible {
     outline: 2px solid var(--portfolio-primary);
