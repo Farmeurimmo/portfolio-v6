@@ -17,12 +17,23 @@ export default defineNuxtConfig({
         ]
     },
 
+    turnstile: {
+        siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
+    },
+
+    runtimeConfig: {
+        public: {
+            contactApiUrl: process.env.NUXT_PUBLIC_CONTACT_API_URL || 'https://contact-api.farmeurimmo.fr',
+        },
+    },
+
     modules: [
         '@nuxtjs/i18n',
         '@nuxtjs/color-mode',
         '@nuxt/content',
         '@nuxtjs/sitemap',
-        '@nuxtjs/seo'
+        '@nuxtjs/seo',
+        '@nuxtjs/turnstile'
     ],
 
     site: {

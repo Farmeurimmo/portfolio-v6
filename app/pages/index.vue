@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {useI18n} from 'vue-i18n'
+import ContactDetails from "~/components/ContactDetails.vue";
 
 const {t} = useI18n()
 const localePath = useLocalePath()
@@ -375,96 +376,14 @@ useSeoMeta({
       </header>
 
       <div class="contact__layout">
-        <div class="contact__details">
-          <h3 class="contact__subtitle">
-            {{ t('home.contact.otherMethods') }}
-          </h3>
+        <ContactDetails heading-tag="h3"/>
 
-          <address class="contact__address">
-            <a href="mailto:pro@robin-massonnat.fr">
-              pro@robin-massonnat.fr
-            </a>
-
-            <p>
-              Discord : Farmeurimmo
-            </p>
-          </address>
-        </div>
-
-        <form
-            class="contact-form"
-            @submit.prevent
-            v-if="false"
+        <NuxtLink
+            :to="localePath('/contact')"
+            class="hero__link hero__link--primary contact__cta"
         >
-          <div class="contact-form__field">
-            <label for="contact-username">
-              {{ t('home.contact.form.username') }}
-            </label>
-
-            <input
-                id="contact-username"
-                name="username"
-                type="text"
-                autocomplete="name"
-                required
-            />
-          </div>
-
-          <div class="contact-form__field">
-            <label for="contact-email">
-              {{ t('home.contact.form.email') }}
-            </label>
-
-            <input
-                id="contact-email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                required
-            />
-          </div>
-
-          <div class="contact-form__field">
-            <label for="contact-subject">
-              {{ t('home.contact.form.subject') }}
-            </label>
-
-            <input
-                id="contact-subject"
-                name="subject"
-                type="text"
-                required
-            />
-          </div>
-
-          <div class="contact-form__field">
-            <label for="contact-message">
-              {{ t('home.contact.form.message') }}
-            </label>
-
-            <textarea
-                id="contact-message"
-                name="message"
-                rows="6"
-                required
-            />
-          </div>
-
-          <button
-              class="contact-form__submit"
-              type="submit"
-          >
-            {{ t('home.contact.form.submit') }}
-          </button>
-        </form>
-        <div
-            v-else
-            class="contact-form__disabled text-red-600 font-bold"
-        >
-          <p>
-            {{ t('home.contact.form.disabled') }}
-          </p>
-        </div>
+          {{ t('home.contact.cta') }}
+        </NuxtLink>
       </div>
     </section>
   </main>

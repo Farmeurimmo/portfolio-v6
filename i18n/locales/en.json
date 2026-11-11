@@ -95,18 +95,29 @@
     },
     "contact": {
       "eyebrow": "Contact",
-      "title": "Want to get in touch?",
-      "description": "Feel free to send me a message using the form or the contact methods below. I will get back to you as soon as possible.",
-      "otherMethods": "Other ways to contact me",
-      "name": "Robin Massonnat",
-      "form": {
-        "disabled": "The contact form is temporarily disabled.",
-        "username": "Username",
-        "email": "Email",
-        "subject": "Subject",
-        "message": "Message",
-        "submit": "Send message"
-      }
+      "title": "Got a project in mind?",
+      "description": "A question, a proposal or an opportunity: reach out through the form or directly by email.",
+      "cta": "Write a message"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact – Java & Vue Developer",
+      "description": "A question, a project or an opportunity? Reach me through the form, by email or on Discord."
+    },
+    "eyebrow": "Contact",
+    "title": "Let’s talk about your project",
+    "description": "A question, a proposal or a project? I’ll get back to you as soon as possible.",
+    "otherMethods": "Other ways to reach me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent. I’ll get back to you soon.",
+      "error": "Your message couldn’t be sent. Try again in a moment or email me directly."
     }
   },
   "projects": {

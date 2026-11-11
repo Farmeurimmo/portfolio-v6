@@ -95,18 +95,29 @@
     },
     "contact": {
       "eyebrow": "Contact",
-      "title": "Vous souhaitez me contacter ?",
-      "description": "N'hésitez pas à m'envoyer un message en utilisant le formulaire ou les moyens de contact ci-dessous. Je vous répondrai dans les plus brefs délais.",
-      "otherMethods": "Autres moyens de me contacter",
-      "name": "Robin Massonnat",
-      "form": {
-        "disabled": "Le formulaire de contact est temporairement désactivé.",
-        "username": "Nom d'utilisateur",
-        "email": "Email",
-        "subject": "Objet",
-        "message": "Message",
-        "submit": "Envoyer le message"
-      }
+      "title": "Un projet en tête ?",
+      "description": "Une question, une proposition ou une opportunité : écrivez-moi via le formulaire ou directement par email.",
+      "cta": "Écrire un message"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact – Développeur Java & Vue",
+      "description": "Une question, un projet ou une opportunité ? Écrivez-moi via le formulaire, par email ou sur Discord."
+    },
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet",
+    "description": "Une question, une proposition ou un projet ? Je vous réponds dans les meilleurs délais.",
+    "otherMethods": "Autres moyens de contact",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone (facultatif)",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "success": "Message envoyé. Je vous réponds rapidement.",
+      "error": "Le message n’a pas pu être envoyé. Réessayez dans quelques instants ou écrivez-moi directement par email."
     }
   },
   "projects": {

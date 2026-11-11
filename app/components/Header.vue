@@ -9,7 +9,7 @@ const navItems = [
   {label: 'nav.home', path: '/'},
   {label: 'nav.projects', path: '/projects'},
   {label: 'nav.blog', path: '/blog'},
-  {label: 'nav.contact', path: '/#contact'}
+  {label: 'nav.contact', path: '/contact'}
 ]
 
 const localeLabels: Record<string, string> = {
