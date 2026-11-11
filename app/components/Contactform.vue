@@ -10,7 +10,8 @@ const fields = [
 ] as const
 
 const isSending = computed(() => status.value === 'sending')
-const hasResult = computed(() => status.value === 'success' || status.value === 'error')
+const isSent = computed(() => status.value === 'success')
+const hasResult = computed(() => isSent.value || status.value === 'error')
 
 const handleSubmit = async () => {
   await submit()
@@ -19,49 +20,55 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <form class="contact-form" @submit.prevent="handleSubmit">
-    <div
-        v-for="field in fields"
-        :key="field.id"
-        class="contact-form__field"
+  <div>
+    <form
+        v-if="!isSent"
+        class="contact-form"
+        @submit.prevent="handleSubmit"
     >
-      <label :for="`contact-${field.id}`">
-        {{ t(`contact.form.${field.id}`) }}
-      </label>
+      <div
+          v-for="field in fields"
+          :key="field.id"
+          class="contact-form__field"
+      >
+        <label :for="`contact-${field.id}`">
+          {{ t(`contact.form.${field.id}`) }}
+        </label>
 
-      <input
-          :id="`contact-${field.id}`"
-          v-model="form[field.id]"
-          :name="field.id"
-          :type="field.type"
-          :autocomplete="field.autocomplete"
-          :required="field.required"
-      />
-    </div>
+        <input
+            :id="`contact-${field.id}`"
+            v-model="form[field.id]"
+            :name="field.id"
+            :type="field.type"
+            :autocomplete="field.autocomplete"
+            :required="field.required"
+        />
+      </div>
 
-    <div class="contact-form__field">
-      <label for="contact-message">
-        {{ t('contact.form.message') }}
-      </label>
+      <div class="contact-form__field">
+        <label for="contact-message">
+          {{ t('contact.form.message') }}
+        </label>
 
-      <textarea
-          id="contact-message"
-          v-model="form.message"
-          name="message"
-          rows="6"
-          required
-      />
-    </div>
+        <textarea
+            id="contact-message"
+            v-model="form.message"
+            name="message"
+            rows="6"
+            required
+        />
+      </div>
 
-    <NuxtTurnstile ref="turnstile" v-model="token"/>
+      <NuxtTurnstile ref="turnstile" v-model="token"/>
 
-    <button
-        class="contact-form__submit"
-        type="submit"
-        :disabled="isSending || !token"
-    >
-      {{ t(isSending ? 'contact.form.sending' : 'contact.form.submit') }}
-    </button>
+      <button
+          class="contact-form__submit"
+          type="submit"
+          :disabled="isSending || !token"
+      >
+        {{ t(isSending ? 'contact.form.sending' : 'contact.form.submit') }}
+      </button>
+    </form>
 
     <p
         role="status"
@@ -71,5 +78,5 @@ const handleSubmit = async () => {
         {{ t(`contact.form.${status}`) }}
       </template>
     </p>
-  </form>
+  </div>
 </template>
