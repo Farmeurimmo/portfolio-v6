@@ -163,9 +163,12 @@ useSeoMeta({
             {{ t('home.hero.projectsCta') }}
           </a>
 
-          <a href="#contact" class="hero__link hero__link--secondary">
+          <NuxtLink
+              :to="localePath('/contact')"
+              class="hero__link hero__link--secondary contact__cta"
+          >
             {{ t('home.hero.contactCta') }}
-          </a>
+          </NuxtLink>
         </nav>
       </div>
 
